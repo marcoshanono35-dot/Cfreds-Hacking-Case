@@ -27,3 +27,8 @@ To find this, we must navigate through the file system of the machine image to t
 As we can see, the answer in this case is **Microsoft Windows XP Professional** <br>
 
 ## 3. When was the install date?
+
+To find this, we can simply look at the creation date of the **boot.ini** file from the last question, which reveals the answer to be **08/19/2004 4:47:33 PM** <br>
+<img src="q3-cfreds.png" alt="install date" width="500" /> <br>
+
+##  4. What is the timezone settings?
