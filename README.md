@@ -16,4 +16,14 @@ This scenario comes with 30 questions to be answered, and the images you'll want
 
 To solve this, we use FTK imager's built-in verification function found on the top toolbar. <br>
 <img src="toolbar-verify.png" alt="verification tool location" width="500" /> <br>
-This will open a dialog box/window that will run for a few seconds (9 in my case) and then will leave you with a window containing the hashes.
+This will open a dialog box/window that will run for a few seconds (9 in my case) and then will leave you with a window containing the hashes. <br>
+<img src="verify-window.png" alt="verification tool result" width="500" /> <br>
+As we can see, the answer to the first question is **aee4fcd9301c03b3b054623ca261959a** and the verification hash does indeed match. <br>
+
+## 2. What operating system was used on the computer?
+
+To find this, we must navigate through the file system of the machine image to the **[root]** folder where we will find a file called **boot.ini**, this file will contain the operating system used on the machin in plaintext once selected. <br>
+<img src="q2-cfreds.png" alt="operating system" width="500" /> <br>
+As we can see, the answer in this case is **Microsoft Windows XP Professional** <br>
+
+## 3. When was the install date?
