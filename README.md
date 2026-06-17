@@ -33,9 +33,16 @@ To find this, we can simply look at the creation date of the **boot.ini** file f
 
 ##  4. What is the timezone settings?
 
-For this, we need to navigate to **Windows/system32/config** and EXPORT the file called **system** since this contains the information we need. then we need to open it in **registry viewer**, which is a tool that can be found here: https://www.exterro.com/ftk-downloads/registry-viewer-2-0-0 <br>
+For this, we need to navigate to **Windows/system32/config** and EXPORT the file called **system** (by right-clicking and selecting the export option) since this contains the information we need. then we need to open it in **registry viewer**, which is a tool that can be found here: https://www.exterro.com/ftk-downloads/registry-viewer-2-0-0 <br>
 <img src="q4-cfreds-1.png" alt="getting system" width="500" /> <br>
 Doing so will allow us to navigate to **the active control set** (in this case ControlSet001) then to **Control** and finally to **TimeZoneInformation** where we can find the answer to be **Central Standard/Daylight Time**
 <img src="q4-cfreds-2.png" alt="opening system" width="500" /> <br>
 
 ## 5. Who is the registered owner?
+
+Like the previous question, we will need to export a file and open it in Registry Viewer, but this time the file we need is **software**, and it's located in the same place as **system** <br>
+<img src="q5-cfreds-1.png" alt="getting software" width="500" /> <br>
+Once open in Registry Viewer, we can navigate to **Microsoft/WindowsNT/CurrentVersion** where the registered owner is visible in plaintext which says **Greg Schardt** <br>
+<img src="q5-cfreds-2.png" alt="getting owner" width="500" /> <br>
+
+##  6. What is the computer account name?
