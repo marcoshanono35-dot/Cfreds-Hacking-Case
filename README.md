@@ -48,9 +48,9 @@ Once open in Registry Viewer, we can navigate to **Microsoft/WindowsNT/CurrentVe
 ##  6. What is the computer account name?
 
 This can be found in the **system** file we already exported and opened under the **current control set** (in this case ControlSet001) under control and in the **ComputerName** entry which gives us an answer of **N-1A9ODN6ZXK4LQ** <br>
-<img src="q6-cfreds.png" alt="getting owner" width="500" /> <br>
+<img src="q6-cfreds.png" alt="getting hostname" width="500" /> <br>
 
 ##  7. What is the primary domain name?
 
 This one was a bit tricky as under the usual **services/tcpip/parameters** tab in **system** the **Domain** string is empty, the closest thing I could find was the name **EVIL** in **NetSetup.LOG** in **Windows/system32/debug** <br>
-<img src="q7-cfreds.png" alt="getting owner" width="500" /> <br>
+<img src="q7-cfreds.png" alt="getting domain name" width="500" /> <br>
