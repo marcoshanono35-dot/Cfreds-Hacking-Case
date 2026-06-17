@@ -14,4 +14,6 @@ This scenario comes with 30 questions to be answered, and the images you'll want
 
 ## 1. What is the image hash? Does the acquisition and verification hash match?
 
-To solve this, we use FTK imager's built-in verification function found on the top toolbar.
+To solve this, we use FTK imager's built-in verification function found on the top toolbar. <br>
+<img src="toolbar-verify.png" alt="verification tool location" width="500" /> <br>
+This will open a dialog box/window that will run for a few seconds (9 in my case) and then will leave you with a window containing the hashes.
