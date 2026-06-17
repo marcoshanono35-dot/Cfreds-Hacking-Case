@@ -32,3 +32,10 @@ To find this, we can simply look at the creation date of the **boot.ini** file f
 <img src="q3-cfreds.png" alt="install date" width="500" /> <br>
 
 ##  4. What is the timezone settings?
+
+For this, we need to navigate to **Windows/system32/config** and EXPORT the file called **system** since this contains the information we need. then we need to open it in **registry viewer**, which is a tool that can be found here: https://www.exterro.com/ftk-downloads/registry-viewer-2-0-0 <br>
+<img src="q4-cfreds-1.png" alt="install date" width="500" /> <br>
+Doing so will allow us to navigate to **the active control set** (in this case ControlSet001) then to **Control** and finally to **TimeZoneInformation** where we can find the answer to be **Central Standard/Daylight Time**
+<img src="q4-cfreds-2.png" alt="install date" width="500" /> <br>
+
+## 5. Who is the registered owner?
