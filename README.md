@@ -54,3 +54,8 @@ This can be found in the **system** file we already exported and opened under th
 
 This one was a bit tricky as under the usual **services/tcpip/parameters** tab in **system** the **Domain** string is empty, the closest thing I could find was the name **EVIL** in **NetSetup.LOG** in **Windows/system32/debug** <br>
 <img src="q7-cfreds.png" alt="getting domain name" width="500" /> <br>
+
+##  8. When was the last recorded computer shutdown date/time?
+
+For this one, we need to remain in the **system** registry hive, and we need to navigate to **ControlSet001/Control/Windows** where we can find the **ShutdownTime** entry, which contains the value **C4 FC 00 07 4D 8C C4 01** which is stored in the **64-bit FILETIME format**. While it is possible to convert this to a regular date and time, this should be sufficient for the purposes of this scenario.
+<img src="q8-cfreds.png" alt="getting shutdowntime" width="500" /> <br>
