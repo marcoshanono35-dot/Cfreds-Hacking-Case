@@ -64,3 +64,13 @@ For this one, we need to remain in the **system** registry hive, and we need to 
 
 For this, we need to export the **SAM** registry hive, which is in the same place as the previous two that we have already exported. From there we need to navigate to **SAM/Domains/Account/Users/Names** where we can count a total of **5** accounts: **Administrator, Guest, HelpAssistant, Mr.Evil,** and **SUPPORT_388945a0** <br>
 <img src="q9-cfreds.png" alt="getting accounts" width="500" /> <br>
+
+##  10. What is the account name of the user who mostly uses the computer?
+
+By looking through the **SAM** registry hive we can find that **Mr.Evil** logged on to the computer **15 times** <br>
+<img src="q10-cfreds.png" alt="getting user logons" width="500" /> <br>
+
+##  11. Who was the last user to logon to the computer?
+
+By exploring the **software** registry hive to **Microsoft/WindowsNT/CurrentVersion/Winlogon** we can see that the default username is **Mr.Evil**, since this is the value in there, it can be safely assumed that he last used the computer since the default username is the username of the last person to log in on that particular machine.<br>
+<img src="q11-cfreds.png" alt="getting user logons" width="500" /> <br>
