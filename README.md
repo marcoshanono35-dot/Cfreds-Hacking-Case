@@ -35,7 +35,7 @@ To find this, we can simply look at the creation date of the **boot.ini** file f
 
 For this, we need to navigate to **Windows/system32/config** and EXPORT the file called **system** (by right-clicking and selecting the export option) since this contains the information we need. then we need to open it in **registry viewer**, which is a tool that can be found here: https://www.exterro.com/ftk-downloads/registry-viewer-2-0-0 <br>
 <img src="q4-cfreds-1.png" alt="getting system" width="500" /> <br>
-Doing so will allow us to navigate to **the active control set** (in this case ControlSet001) then to **Control** and finally to **TimeZoneInformation** where we can find the answer to be **Central Standard/Daylight Time**
+Doing so will allow us to navigate to **the active control set** (in this case ControlSet001) then to **Control** and finally to **TimeZoneInformation** where we can find the answer to be **Central Standard/Daylight Time**<br>
 <img src="q4-cfreds-2.png" alt="opening system" width="500" /> <br>
 
 ## 5. Who is the registered owner?
@@ -57,5 +57,9 @@ This one was a bit tricky as under the usual **services/tcpip/parameters** tab i
 
 ##  8. When was the last recorded computer shutdown date/time?
 
-For this one, we need to remain in the **system** registry hive, and we need to navigate to **ControlSet001/Control/Windows** where we can find the **ShutdownTime** entry, which contains the value **C4 FC 00 07 4D 8C C4 01** which is stored in the **64-bit FILETIME format**. While it is possible to convert this to a regular date and time, this should be sufficient for the purposes of this scenario.
+For this one, we need to remain in the **system** registry hive, and we need to navigate to **ControlSet001/Control/Windows** where we can find the **ShutdownTime** entry, which contains the value **C4 FC 00 07 4D 8C C4 01** which is stored in the **64-bit FILETIME format**. While it is possible to convert this to a regular date and time, this should be sufficient for the purposes of this scenario. <br>
 <img src="q8-cfreds.png" alt="getting shutdowntime" width="500" /> <br>
+
+##  9. How many accounts are recorded (total number)?
+
+For this, we need to export the **SAM** registry hive, which is in the same place as the previous two that we have already exported. From there we need to navigate to **SAM/Domains/Account/Users/Names** where we can count a total of **5** accounts: **Administrator, Guest, HelpAssistant, Mr.Evil,** and **SUPPORT_388945a0** <br>
