@@ -63,3 +63,4 @@ For this one, we need to remain in the **system** registry hive, and we need to 
 ##  9. How many accounts are recorded (total number)?
 
 For this, we need to export the **SAM** registry hive, which is in the same place as the previous two that we have already exported. From there we need to navigate to **SAM/Domains/Account/Users/Names** where we can count a total of **5** accounts: **Administrator, Guest, HelpAssistant, Mr.Evil,** and **SUPPORT_388945a0** <br>
+<img src="q9-cfreds.png" alt="getting accounts" width="500" /> <br>
