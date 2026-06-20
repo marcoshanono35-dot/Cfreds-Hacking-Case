@@ -93,3 +93,6 @@ Looking back in the **irunin.ini** file, we see entries for **LANIP and LANNIC**
 <img src="q14-cfreds.png" alt="IP and MAC" width="500" /> <br>
 
 ##  15. An internet search for vendor name/model of NIC cards by MAC address can be used to find out which network interface was used. In the above answer, the first 3 hex characters of the MAC address report the vendor of the card. Which NIC card was used during the installation and set-up for LOOK@LAN?
+
+Now that we have the MAC address from **irunin.ini** we can use a free online lookup tool to pinpoint the vendor of the card used for setting up Look@LAN which, in this case, is the **Xircom** card we discovered earlier.
+<img src="q15-cfreds.png" alt="MAC vendor" width="500" /> <br>
