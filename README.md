@@ -73,4 +73,23 @@ By looking through the **SAM** registry hive we can find that **Mr.Evil** logged
 ##  11. Who was the last user to logon to the computer?
 
 By exploring the **software** registry hive to **Microsoft/WindowsNT/CurrentVersion/Winlogon** we can see that the default username is **Mr.Evil**, since this is the value in there, it can be safely assumed that he last used the computer since the default username is the username of the last person to log in on that particular machine.<br>
-<img src="q11-cfreds.png" alt="getting user logons" width="500" /> <br>
+<img src="q11-cfreds.png" alt="getting last user logon" width="500" /> <br>
+
+##  12. A search for the name of “G=r=e=g S=c=h=a=r=d=t” reveals multiple hits. One of these proves that G=r=e=g S=c=h=a=r=d=t is Mr. Evil and is also the administrator of this computer. What file is it? What software program does this file relate to?
+
+To figure this out, we must look through the program files to find the program where both Mr. Evil and Greg Schardt are listed. I chose to look through the files of programs that aren't native to Windows since they're most likely to have been downloaded by our guy. After looking through some of the text files (.ini, .txt), I found the file **irunin.ini** under the **Look@LAN** entry of program files. In this file we see that Mr. Evil is the LAN User and Greg Schardt is the Registry Owner which proves that Greg and Mr. Evil are the same.<br>
+<img src="q12-cfreds.png" alt="proving Mr.Evil is Greg" width="500" /> <br>
+
+##  13.  List the network cards used by this computer
+
+For this, we must go back to the software registry hive to **WindowsNT/CurrentVersion/NetworkCards** where we will find two folders. Within these two folders are the names of the two network cards in this machine, them being **Compaq WL110 Wireless LAN PC Card** and **Xircom CardBus Ethernet 100 + Modem 56 (Ethernet Interface)**<br>
+<img src="q13-cfreds-1.png" alt="Network Cards location" width="500" /> <br>
+<img src="q13-cfreds-2.png" alt="Card 1" width="500" /> <br>
+<img src="q13-cfreds-3.png" alt="Card 2" width="500" /> <br>
+
+##  14. This same file reports the IP address and MAC address of the computer. What are they?
+
+Looking back in the **irunin.ini** file, we see entries for **LANIP and LANNIC** which are **192.168.1.111 and 0010a4933e09**<br>
+<img src="q14-cfreds.png" alt="IP and MAC" width="500" /> <br>
+
+##  15. An internet search for vendor name/model of NIC cards by MAC address can be used to find out which network interface was used. In the above answer, the first 3 hex characters of the MAC address report the vendor of the card. Which NIC card was used during the installation and set-up for LOOK@LAN?
