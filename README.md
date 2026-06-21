@@ -96,3 +96,36 @@ Looking back in the **irunin.ini** file, we see entries for **LANIP and LANNIC**
 
 Now that we have the MAC address from **irunin.ini** we can use a free online lookup tool to pinpoint the vendor of the card used for setting up Look@LAN which, in this case, is the **Xircom** card we discovered earlier.<br>
 <img src="q15-cfreds.png" alt="MAC vendor" width="500" /> <br>
+
+##  16. Find 6 installed programs that may be used for hacking.
+
+This really is just as simple as looking through Program Files and looking up any names that seem suspicious. <br>
+<div align="center">
+
+| Program Name | Purpose |
+| :---: | :---: |
+| 123WASP | Password storer/decrypter |
+| Look@LAN | Monitor connections to a network |
+| Anonymizer | Proxy creation tool |
+| Cain & Abel | Password cracker |
+| Ethereal | Packet sniffer |
+| Net Stumbler | Network mapping tool |
+
+</div> <br>
+<img src="q16-cfreds.png" alt="MAC vendor" width="500" /> <br>
+
+## 17. What is the SMTP email address for Mr. Evil?
+
+To find this, we must look through the filesystem for the place where a majority of user data is stored or the **NTUSER.DAT** file. After exporting this file we can open it in a text editor (like Notepad) and do a search for SMTP which yields the result **whoknowsme@sbcglobal.net** however the file is otherwise full of gibberish, there are ways to read these types of files but for the purposes of this scenario notepad works just fine. <br>
+<img src="q17-cfreds.png" alt="SMTP data" width="500" /> <br>
+
+##  18. What are the NNTP (news server) settings for Mr. Evil?
+
+Like the previous question, the answers are located in the **NTUSER.DAT** file where a keyword search for NNTP returns some data but opening it in Registry Viewer reveals it in a much more readable format. From this, we get the server **news.dallas.sbcglobal.net** the user **whoknowsme@sbcglobal.net** the password **news.dallas.sbcglobal.netF6E2BA30** the display name **Mr. Evil** and the NNTP email **whoknowsme@sbcglobal.net**<br>
+<img src="q18-cfreds.png" alt="NNTP data" width="500" /> <br>
+
+##  19. What two installed programs show this information?
+
+Just by viewing the location of the data we previously extracted, that being in NTUSER.DAT under the  **Internet Accounts Manager/Accounts** folder(s), we can conclude that **Outlook Express** is one of the programs because Internet Accounts Manager is the built-in location for Outlook Express to store this data, therefore finding it there means that Outlook Express nust have been used on this machine. In order to find the other program, we need to go back to the evidence tree of the image and start searching. While I was looking into the software installed on this PC, I found out that Forte Agent is a newsreader that gives me a place to look concerning the NNTP data. Upon navigating to the **Data** folder and looking through **agent.ini**, I found that all the settings and credentials matched what was found in the NTUSER.DAT registry hive, confirming that **Forte Agent** is the other program. <br>
+<img src="q18-cfreds.png" alt="NNTP data" width="500" /> <br>
+<img src="q19-cfreds.png" alt="NNTP data" width="500" /> <br>
