@@ -116,7 +116,7 @@ This really is just as simple as looking through Program Files and looking up an
 
 ## 17. What is the SMTP email address for Mr. Evil?
 
-To find this, we must look through the filesystem for the place where a majority of user data is stored or the **NTUSER.DAT** file. After exporting this file we can open it in a text editor (like Notepad) and do a search for SMTP which yields the result **whoknowsme@sbcglobal.net** however the file is otherwise full of gibberish, there are ways to read these types of files but for the purposes of this scenario notepad works just fine. <br>
+To find this, we must look through the filesystem for the place where a majority of user data is stored or the **NTUSER.DAT** file. After exporting this file, we can open it in a text editor (like Notepad) and do a search for SMTP, which yields the result **whoknowsme@sbcglobal.net**; however, the file is otherwise full of gibberish. A more readable view can be achieved by using Registry Viewer to open the file. <br>
 <img src="q17-cfreds.png" alt="SMTP data" width="500" /> <br>
 
 ##  18. What are the NNTP (news server) settings for Mr. Evil?
