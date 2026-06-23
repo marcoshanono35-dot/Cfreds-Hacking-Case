@@ -148,7 +148,7 @@ In the **logs** folder we can find all of the sessions this user connected to. 3
 ##  23. Ethereal, a popular “sniffing” program that can be used to intercept wired and wireless internet packets was also found to be installed. When TCP packets are collected and re-assembled, the default save directory is that users \My Documents directory. What is the name of the file that contains the intercepted data? <br>
 
 By looking in the **recent** file in the **application data** folder, we can find that the name of the file is **interception** <br>
-<img src="q23-cfreds.png" alt="filename discovery" width="500" /> <br>
+<img src="q23-cfreds-1.png" alt="filename discovery" width="500" /> <br>
 
 ##  24. Viewing the file in a text format reveals much information about who and what was intercepted. What type of wireless computer was the victim (person who had his internet surfing recorded) using?
 
