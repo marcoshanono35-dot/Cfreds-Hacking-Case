@@ -129,3 +129,36 @@ Like the previous question, the answers are located in the **NTUSER.DAT** file w
 Just by viewing the location of the data we previously extracted, that being in NTUSER.DAT under the  **Internet Accounts Manager/Accounts** folder(s), we can conclude that **Outlook Express** is one of the programs because Internet Accounts Manager is the built-in location for Outlook Express to store this data, therefore finding it there means that Outlook Express nust have been used on this machine. In order to find the other program, we need to go back to the evidence tree of the image and start searching. While I was looking into the software installed on this PC, I found out that Forte Agent is a newsreader that gives me a place to look concerning the NNTP data. Upon navigating to the **Data** folder and looking through **agent.ini**, I found that all the settings and credentials matched what was found in the NTUSER.DAT registry hive, confirming that **Forte Agent** is the other program. <br>
 <img src="q18-cfreds.png" alt="NNTP data" width="500" /> <br>
 <img src="q19-cfreds.png" alt="NNTP data" width="500" /> <br>
+
+##  20. List 5 newsgroups that Mr. Evil has subscribed to?
+
+This data is stored under Mr. Evil's local settings in the **Identities** folder we can find **alt.binaries.hacking.dbx, alt.binaries.hacking.beginner.dbx, alt.binaries.hacking.computers.dbx, free.binaries.hacking.malicious.dbx, and free.binaries.hacking.websites.dbx** <br>
+<img src="q20-cfreds.png" alt="newsgroups" width="500" /> <br>
+
+##  21. A popular IRC (Internet Relay Chat) program called MIRC was installed.  What are the user settings that was shown when the user was online and in a chat channel?
+
+This information is conveniently located in the mIRC program files entry in the **mirc.ini** file. <br>
+<img src="q21-cfreds.png" alt="mirc settings" width="500" /> <br>
+
+##  22. This IRC program has the capability to log chat sessions. List 3 IRC channels that the user of this computer accessed.
+
+In the **logs** folder we can find all of the sessions this user connected to. 3 of them are: **CyberCafe.UnderNet, Elite.Hackers.UnderNet, and thedarktower.AfterNET** <br>
+<img src="q22-cfreds.png" alt="connections" width="500" /> <br>
+
+##  23. Ethereal, a popular “sniffing” program that can be used to intercept wired and wireless internet packets was also found to be installed. When TCP packets are collected and re-assembled, the default save directory is that users \My Documents directory. What is the name of the file that contains the intercepted data? <br>
+
+By looking in the **recent** file in the **application data** folder, we can find that the name of the file is **interception** <br>
+<img src="q23-cfreds.png" alt="filename discovery" width="500" /> <br>
+
+##  24. Viewing the file in a text format reveals much information about who and what was intercepted. What type of wireless computer was the victim (person who had his internet surfing recorded) using?
+
+The type of wireless computer used by the victim is **Windows CE (Pocket PC) - Version 4.20** <br>
+<img src="q24-cfreds.png" alt="device used by victim" width="500" /> <br>
+
+##  25. What websites was the victim accessing?
+
+The victim accessed **msn.com, passportimages.com, login.passport.com, and login.passport.net** <br>
+<img src="q25-cfreds-1.png" alt="website info" width="500" /> <br>
+<img src="q25-cfreds-2.png" alt="website info" width="500" /> <br>
+<img src="q25-cfreds-3.png" alt="website info" width="500" /> <br>
+<img src="q25-cfreds-4.png" alt="website info" width="500" /> <br>
