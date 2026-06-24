@@ -184,10 +184,10 @@ No, since they are still in the recycle bin they can be restored via the Windows
 
 ## 30. How many files are actually reported to be deleted by the file system?
 
-For the sake of saving time, here I used Autopsy (found here: https://www.autopsy.com/download/) to get the number of deleted files instantly, the answer is **365**
+For the sake of saving time, here I used Autopsy (found here: https://www.autopsy.com/download/) to get the number of deleted files instantly, the answer is **365**<br>
 <img src="image/q30-cfreds.png" alt="deleted items" width="500" /> <br>
 
 ## 31. Perform an Anti-Virus check. Are there any viruses on the computer?
 
-After mounting the drive with FTK Imager's built-in mounting tool and scanning it with Malwarebytes (free version) there were 15 hits on the filesystem, so yes, there are viruses on the computer.
+After mounting the drive with FTK Imager's built-in mounting tool and scanning it with Malwarebytes (free version) there were 15 hits on the filesystem, so yes, there are viruses on the computer.<br>
 <img src="image/q31-cfreds.png" alt="virus scan" width="500" /> <br>
